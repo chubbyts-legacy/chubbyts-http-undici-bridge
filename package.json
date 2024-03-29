@@ -1,0 +1,66 @@
+{
+  "name": "@chubbyts/chubbyts-http-undici-bridge",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A undici req/res http bridge.",
+  "keywords": [
+    "chubbyts",
+    "http",
+    "node"
+  ],
+  "author": "Dominik Zogg",
+  "license": "MIT",
+  "repository": "chubbyts/chubbyts-http-undici-bridge",
+  "scripts": {
+    "build": "node ./build.js",
+    "cs-fix": "./node_modules/prettier/bin/prettier.cjs --write src tests",
+    "cs": "./node_modules/prettier/bin/prettier.cjs --check src tests",
+    "infection": "stryker run",
+    "lint-fix": "eslint src tests --fix",
+    "lint": "eslint src tests",
+    "prepare": "npm run build",
+    "test": "jest"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./*": {
+      "types": "./*.d.ts",
+      "require": "./*.cjs",
+      "import": "./*.mjs",
+      "default": "./*.mjs"
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@chubbyts/chubbyts-http-types": "^1.2.3",
+    "undici": "^6.10.2"
+  },
+  "devDependencies": {
+    "@chubbyts/chubbyts-eslint": "^2.0.3",
+    "@chubbyts/chubbyts-function-mock": "^1.4.1",
+    "@chubbyts/chubbyts-packaging": "^2.0.6",
+    "@stryker-mutator/core": "^8.2.6",
+    "@stryker-mutator/jest-runner": "^8.2.6",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.30",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "prettier-2": "npm:prettier@^2.8.8",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.3",
+    "undici-types": "^6.10.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
