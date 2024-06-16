@@ -25,7 +25,7 @@ A undici req/res http bridge.
 
  * node: 18
  * [@chubbyts/chubbyts-http-types][2]: ^1.2.3
- * [undici][3]:^6.10.2
+ * [undici][3]:^6.19.0
 
 ## Installation
 
