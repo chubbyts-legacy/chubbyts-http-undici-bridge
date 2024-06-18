@@ -1,6 +1,6 @@
 import type { Stream } from 'stream';
 import { PassThrough } from 'stream';
-import { describe, expect, test } from '@jest/globals';
+import { describe, expect, test } from 'vitest';
 import { useFunctionMock } from '@chubbyts/chubbyts-function-mock/dist/function-mock';
 import type { ServerRequestFactory, UriFactory } from '@chubbyts/chubbyts-http-types/dist/message-factory';
 import { Request as UndiciRequest } from 'undici';

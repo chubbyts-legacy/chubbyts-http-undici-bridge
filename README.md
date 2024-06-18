@@ -25,14 +25,14 @@ A undici req/res http bridge.
 
  * node: 18
  * [@chubbyts/chubbyts-http-types][2]: ^1.2.3
- * [undici][3]:^6.19.0
+ * [undici][3]:^6.19.2
 
 ## Installation
 
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-http-undici-bridge][1].
 
 ```ts
-npm i @chubbyts/chubbyts-http-undici-bridge@^1.0
+npm i @chubbyts/chubbyts-http-undici-bridge@^1.0.2
 ```
 
 ## Usage
