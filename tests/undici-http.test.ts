@@ -15,7 +15,7 @@ const streamToString = async (stream: Stream): Promise<string> => {
     // eslint-disable-next-line functional/immutable-data
     stream.on('data', (chunk) => list.push(chunk));
     stream.on('end', () => resolve(Buffer.concat(list).toString('utf-8')));
-    stream.on('error', (error) => reject(error));
+    stream.on('error', reject);
   });
 };
 
