@@ -24,15 +24,15 @@ A undici req/res http bridge.
 ## Requirements
 
  * node: 18
- * [@chubbyts/chubbyts-http-types][2]: ^1.2.3
- * [undici][3]:^6.19.2
+ * [@chubbyts/chubbyts-http-types][2]: ^1.3.0
+ * [undici][3]:^7.2.0
 
 ## Installation
 
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-http-undici-bridge][1].
 
 ```ts
-npm i @chubbyts/chubbyts-http-undici-bridge@^1.0.2
+npm i @chubbyts/chubbyts-http-undici-bridge@^1.1.0
 ```
 
 ## Usage
@@ -58,7 +58,7 @@ const res = responseToUndiciFactory(await app(undiciToServerRequestFactory(req))
 
 ## Copyright
 
-2024 Dominik Zogg
+2025 Dominik Zogg
 
 [1]: https://www.npmjs.com/package/@chubbyts/chubbyts-http-undici-bridge
 [2]: https://www.npmjs.com/package/@chubbyts/chubbyts-http-types

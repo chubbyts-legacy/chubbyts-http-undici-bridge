@@ -195,7 +195,7 @@ describe('undici-http', () => {
     expect(undiciResponse.status).toBe(200);
     expect(undiciResponse.statusText).toBe('OK');
 
-    expect(Array.from(undiciResponse.headers.entries())).toMatchInlineSnapshot(`
+    expect(Array.from(undiciResponse.headers)).toMatchInlineSnapshot(`
       [
         [
           "content-type",

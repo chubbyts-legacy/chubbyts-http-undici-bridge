@@ -41,6 +41,6 @@ export const createResponseToUndiciFactory =
     return new UndiciResponse(response.body.iterator(), {
       status: response.status,
       statusText: response.reasonPhrase,
-      headers: response.headers,
+      headers: Object.entries(response.headers).map(([name, value]) => [name, value.join(',')]),
     });
   };
