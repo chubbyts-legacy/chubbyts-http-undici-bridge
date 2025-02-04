@@ -5,7 +5,6 @@ import { useFunctionMock } from '@chubbyts/chubbyts-function-mock/dist/function-
 import type { ServerRequestFactory, UriFactory } from '@chubbyts/chubbyts-http-types/dist/message-factory';
 import { Request as UndiciRequest } from 'undici';
 import type { Response, ServerRequest, Uri } from '@chubbyts/chubbyts-http-types/dist/message';
-import { Method } from '@chubbyts/chubbyts-http-types/dist/message';
 import { createResponseToUndiciFactory, createUndiciToServerRequestFactory } from '../src/undici-http';
 
 const streamToString = async (stream: Stream): Promise<string> => {
@@ -42,7 +41,7 @@ describe('undici-http', () => {
       };
 
       const serverRequest: ServerRequest = {
-        method: Method.GET,
+        method: 'GET',
         uri,
         attributes: {},
         protocolVersion: '1.0',
@@ -55,7 +54,7 @@ describe('undici-http', () => {
       ]);
 
       const [serverRequestFactory, serverRequestFactoryMocks] = useFunctionMock<ServerRequestFactory>([
-        { parameters: [Method.GET, uri], return: serverRequest },
+        { parameters: ['GET', uri], return: serverRequest },
       ]);
 
       const undiciToServerRequestFactory = createUndiciToServerRequestFactory(uriFactory, serverRequestFactory);
@@ -118,7 +117,7 @@ describe('undici-http', () => {
       };
 
       const serverRequest: ServerRequest = {
-        method: Method.POST,
+        method: 'POST',
         uri,
         attributes: {},
         protocolVersion: '1.0',
@@ -131,7 +130,7 @@ describe('undici-http', () => {
       ]);
 
       const [serverRequestFactory, serverRequestFactoryMocks] = useFunctionMock<ServerRequestFactory>([
-        { parameters: [Method.POST, uri], return: serverRequest },
+        { parameters: ['POST', uri], return: serverRequest },
       ]);
 
       const undiciToServerRequestFactory = createUndiciToServerRequestFactory(uriFactory, serverRequestFactory);
