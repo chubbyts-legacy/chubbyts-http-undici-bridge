@@ -32,7 +32,7 @@ A undici req/res http bridge.
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-http-undici-bridge][1].
 
 ```ts
-npm i @chubbyts/chubbyts-http-undici-bridge@^2.0.0
+npm i @chubbyts/chubbyts-http-undici-bridge@^2.0.1
 ```
 
 ## Usage
