@@ -1,7 +1,7 @@
 {
   "name": "@chubbyts/chubbyts-http-undici-bridge",
   "type": "module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A undici req/res http bridge.",
   "keywords": [
     "chubbyts",
@@ -38,7 +38,7 @@
     }
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "@chubbyts/chubbyts-http-types": "^3.0.0",
