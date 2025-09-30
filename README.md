@@ -17,6 +17,8 @@
 [![sqale_index](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-http-undici-bridge&metric=sqale_index)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-http-undici-bridge)
 [![vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=chubbyts_chubbyts-http-undici-bridge&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=chubbyts_chubbyts-http-undici-bridge)
 
+**Deprecated: @chubbyts/chubbyts-http-types is replaced by@chubbyts/chubbyts-undici-server, no replacement needed, undici is default.**
+
 ## Description
 
 A undici req/res http bridge.
